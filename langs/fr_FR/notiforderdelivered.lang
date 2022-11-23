@@ -37,6 +37,6 @@ NotifOrderDeliveredAbout = About NotifOrderDelivered
 NotifOrderDeliveredAboutPage = NotifOrderDelivered about page
 
 
-EMailTextOrderClose=La commande %s a été livrée.
+EMailTextOrderClose=La commande %s a été receptionnée. Vous pouvez planifier le chantier
 
 

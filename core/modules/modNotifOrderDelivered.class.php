@@ -144,7 +144,7 @@ class modNotifOrderDelivered extends DolibarrModules
 		$this->langfiles = array("notiforderdelivered@notiforderdelivered");
 
 		// Prerequisites
-		$this->phpmin = array(7, 4); // Minimum version of PHP required by module
+		$this->phpmin = array(7, 0); // Minimum version of PHP required by module
 		$this->need_dolibarr_version = array(15, -3); // Minimum version of Dolibarr required by module
 
 		// Messages at activation

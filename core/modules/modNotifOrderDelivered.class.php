@@ -419,8 +419,13 @@ class modNotifOrderDelivered extends DolibarrModules
 //		if ($result < 0) {
 //			return -1; // Do not activate module if error 'not allowed' returned when loading module SQL queries (the _load_table run sql with run_sql with the error allowed parameter set to 'default')
 //		}
+		$notifcodedefid = dol_getIdFromCode($this->db, 'ORDER_CLOSE', 'c_action_trigger', 'code', 'rowid');
+		if ($notifcodedefid <= 0) {
+			$sql[]="INSERT INTO ".$this->db->prefix()."c_action_trigger(code,label,description,elementtype,rang) values ('ORDER_CLOSE','Customer order classify delivered','Executed when a customer order is set delivered','commande',5)";
 
-		return $this->_init(array(), $options);
+		}
+
+		return $this->_init($sql, $options);
 	}
 
 	/**

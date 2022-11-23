@@ -31,26 +31,7 @@ require_once DOL_DOCUMENT_ROOT.'/core/class/notify.class.php';
  */
 class NotifyOrderClose extends Notify
 {
-	static public $arrayofnotifsupported = array(
-		'BILL_VALIDATE',
-		'BILL_PAYED',
-		'ORDER_CREATE',
-		'ORDER_CLOSE',
-		'ORDER_VALIDATE',
-		'PROPAL_VALIDATE',
-		'PROPAL_CLOSE_SIGNED',
-		'FICHINTER_VALIDATE',
-		'FICHINTER_ADD_CONTACT',
-		'ORDER_SUPPLIER_VALIDATE',
-		'ORDER_SUPPLIER_APPROVE',
-		'ORDER_SUPPLIER_REFUSE',
-		'SHIPPING_VALIDATE',
-		'EXPENSE_REPORT_VALIDATE',
-		'EXPENSE_REPORT_APPROVE',
-		'HOLIDAY_VALIDATE',
-		'HOLIDAY_APPROVE',
-		'ACTION_CREATE'
-	);
+	static public $arrayofnotifsupported = array('ORDER_CLOSE'	);
 
 	/**
 	 *  Check if notification are active for couple action/company.
@@ -83,7 +64,7 @@ class NotifyOrderClose extends Notify
 
 		dol_syslog(get_class($this)."::send notifcode=".$notifcode.", object=".$object->id);
 
-		$langs->load("other","notiforderdelivered@notiforderdelivered");
+		$langs->loadLangs(array("other","notiforderdelivered@notiforderdelivered"));
 
 		// Define $urlwithroot
 		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));

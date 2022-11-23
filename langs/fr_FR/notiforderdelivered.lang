@@ -28,6 +28,7 @@ ModuleNotifOrderDeliveredDesc = Add Notification for Order Delivered in same way
 NotifOrderDeliveredSetup = NotifOrderDelivered setup
 Settings = Settings
 NOTIFICATION_FIXEDEMAIL_ORDER_CLOSE_THRESHOLD_HIGHER_0  = Email destinataire
+NOTIFICATION_NOTIFORDER_FORCE_IP=URL Forcé
 
 #
 # About page

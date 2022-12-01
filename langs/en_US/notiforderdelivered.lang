@@ -18,9 +18,9 @@
 #
 
 # Module label 'ModuleNotifOrderDeliveredName'
-ModuleNotifOrderDeliveredName = Add Notification for Order Delivered
+ModuleNotifOrderDeliveredName = Add Notification for Order Delivered and Propal on portal
 # Module description 'ModuleNotifOrderDeliveredDesc'
-ModuleNotifOrderDeliveredDesc = Add Notification for Order Delivered in same way as Noticiation module (without amount filter), useless in 18.0 (core Notification module check github PR #22940)
+ModuleNotifOrderDeliveredDesc = Add Notification for Order Delivered and Propal Web Signed in same way as Noticiation module (without amount filter), useless in 18.0 (core Notification module check github PR #22940)
 
 #
 # Admin page

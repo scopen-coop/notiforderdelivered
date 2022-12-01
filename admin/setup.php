@@ -80,6 +80,7 @@ $type = 'myobject';
 
 $arrayofparameters = array(
 	'NOTIFICATION_FIXEDEMAIL_ORDER_CLOSE_THRESHOLD_HIGHER_0'=>array('type'=>'string', 'css'=>'minwidth500' ,'enabled'=>1),
+	'NOTIFICATION_FIXEDEMAIL_PROPAL_CLOSE_SIGNED_WEB_THRESHOLD_HIGHER_0'=>array('type'=>'string', 'css'=>'minwidth500' ,'enabled'=>1),
 	'NOTIFICATION_NOTIFORDER_FORCE_IP'=>array('type'=>'string', 'css'=>'minwidth500' ,'enabled'=>1),
 	//'NOTIFORDERDELIVERED_MYPARAM2'=>array('type'=>'textarea','enabled'=>1),
 	//'NOTIFORDERDELIVERED_MYPARAM3'=>array('type'=>'category:'.Categorie::TYPE_CUSTOMER, 'enabled'=>1),

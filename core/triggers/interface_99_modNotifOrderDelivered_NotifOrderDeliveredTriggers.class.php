@@ -194,7 +194,11 @@ class InterfaceNotifOrderDeliveredTriggers extends DolibarrTriggers
 			//case 'PROPAL_MODIFY':
 			//case 'PROPAL_VALIDATE':
 			//case 'PROPAL_SENTBYMAIL':
-			//case 'PROPAL_CLOSE_SIGNED':
+			case 'PROPAL_CLOSE_SIGNED':
+				dol_include_once('notiforderdelivered/class/notifypropalportalsign.class.php');
+				$notify = new NotifyOrderClose($this->db);
+
+				$notify->send($action, $object);
 			//case 'PROPAL_CLOSE_REFUSED':
 			//case 'PROPAL_DELETE':
 			//case 'LINEPROPAL_INSERT':

@@ -27,7 +27,8 @@ ModuleNotifOrderDeliveredDesc = Add Notification for Order Delivered in same way
 #
 NotifOrderDeliveredSetup = NotifOrderDelivered setup
 Settings = Settings
-NOTIFICATION_FIXEDEMAIL_ORDER_CLOSE_THRESHOLD_HIGHER_0  = Email destinataire
+NOTIFICATION_FIXEDEMAIL_ORDER_CLOSE_THRESHOLD_HIGHER_0  = Email destinataire Cloture commande
+NOTIFICATION_FIXEDEMAIL_PROPAL_CLOSE_SIGNED_WEB_THRESHOLD_HIGHER_0 = Email destinataire Devis signé sur le portail
 NOTIFICATION_NOTIFORDER_FORCE_IP=URL Forcé
 
 #
@@ -39,5 +40,6 @@ NotifOrderDeliveredAboutPage = NotifOrderDelivered about page
 
 
 EMailTextOrderClose=La commande %s a été receptionnée. Vous pouvez planifier le chantier
+EMailTextProposalClosedSignedWeb=Le devis %s a été signée via le portail client
 
 

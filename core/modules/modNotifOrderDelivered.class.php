@@ -136,7 +136,7 @@ class modNotifOrderDelivered extends DolibarrModules
 		// A condition to hide module
 		$this->hidden = false;
 		// List of module class names as string that must be enabled if this module is enabled. Example: array('always1'=>'modModuleToEnable1','always2'=>'modModuleToEnable2', 'FR1'=>'modModuleToEnableFR'...)
-		$this->depends = array();
+		$this->depends = array('modNotification');
 		$this->requiredby = array(); // List of module class names as string to disable if this one is disabled. Example: array('modModuleToDisable1', ...)
 		$this->conflictwith = array(); // List of module class names as string this module is in conflict with. Example: array('modModuleToDisable1', ...)
 
@@ -419,9 +419,16 @@ class modNotifOrderDelivered extends DolibarrModules
 //		if ($result < 0) {
 //			return -1; // Do not activate module if error 'not allowed' returned when loading module SQL queries (the _load_table run sql with run_sql with the error allowed parameter set to 'default')
 //		}
+		$sql=array();
 		$notifcodedefid = dol_getIdFromCode($this->db, 'ORDER_CLOSE', 'c_action_trigger', 'code', 'rowid');
 		if ($notifcodedefid <= 0) {
 			$sql[]="INSERT INTO ".$this->db->prefix()."c_action_trigger(code,label,description,elementtype,rang) values ('ORDER_CLOSE','Customer order classify delivered','Executed when a customer order is set delivered','commande',5)";
+
+		}
+
+		$notifcodedefid = dol_getIdFromCode($this->db, 'PROPAL_CLOSE_SIGNED_WEB', 'c_action_trigger', 'code', 'rowid');
+		if ($notifcodedefid <= 0) {
+			$sql[]="INSERT INTO ".$this->db->prefix()."c_action_trigger(code,label,description,elementtype,rang) values ('PROPAL_CLOSE_SIGNED_WEB','Propal signated on portal','Executed when a customer sign a propal on web onlign page','propal',2)";
 
 		}
 

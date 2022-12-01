@@ -163,6 +163,7 @@ class InterfaceNotifOrderDeliveredTriggers extends DolibarrTriggers
 				$notify = new NotifyOrderClose($this->db);
 
 				$notify->send($action, $object);
+				break;
 			//case 'ORDER_MODIFY':
 			//case 'ORDER_VALIDATE':
 			//case 'ORDER_DELETE':
@@ -196,9 +197,21 @@ class InterfaceNotifOrderDeliveredTriggers extends DolibarrTriggers
 			//case 'PROPAL_SENTBYMAIL':
 			case 'PROPAL_CLOSE_SIGNED':
 				dol_include_once('notiforderdelivered/class/notifypropalportalsign.class.php');
-				$notify = new NotifyOrderClose($this->db);
+				$sql="SELECT online_sign_ip FROM ".$this->db->prefix().$object->table_element." WHERE rowid=".(int)$object->id;
+				$resql = $this->db->query($sql);
+				if (!$resql) {
+					$this->errors[]=$this->db->lasterror;
+					return -1;
+				}
+				if ($obj=$this->db->fetch_object($resql)) {
+					if (!empty($obj->online_sign_ip)) {
+						$notify = new NotifyPropalPortalSign($this->db);
 
-				$notify->send($action, $object);
+						$notify->send($action.'_WEB', $object);
+					}
+				}
+				break;
+
 			//case 'PROPAL_CLOSE_REFUSED':
 			//case 'PROPAL_DELETE':
 			//case 'LINEPROPAL_INSERT':

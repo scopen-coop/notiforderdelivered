@@ -123,7 +123,7 @@ class NotifyPropalPortalSign extends Notify
 						$dir_output = $conf->propal->multidir_output[$object->entity]."/".get_exdir(0, 0, 0, 1, $object, 'propal');
 						$object_type = 'propal';
 						$labeltouse = $conf->global->PROPAL_CLOSE_SIGNED_TEMPLATE;
-						$mesg = langs->transnoentitiesnoconv("EMailTextProposalClosedSignedWeb", $link);
+						$mesg = $langs->transnoentitiesnoconv("EMailTextProposalClosedSignedWeb", $link);
 						break;
 				}
 				$ref = dol_sanitizeFileName($newref);

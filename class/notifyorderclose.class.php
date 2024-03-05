@@ -31,7 +31,7 @@ require_once DOL_DOCUMENT_ROOT.'/core/class/notify.class.php';
  */
 class NotifyOrderClose extends Notify
 {
-	static public $arrayofnotifsupported = array('ORDER_CLOSE'	);
+	static public $arrayofnotifsupported = array('ORDER_CLOSE');
 
 	/**
 	 *  Check if notification are active for couple action/company.

@@ -42,4 +42,4 @@ NotifOrderDeliveredAboutPage = NotifOrderDelivered about page
 EMailTextOrderClose=La commande %s a été receptionnée. Vous pouvez planifier le chantier
 EMailTextProposalClosedSignedWeb=Le devis %s a été signée via le portail client
 
-
+OrderCloseEmailNotifySend = Email de notification envoyé

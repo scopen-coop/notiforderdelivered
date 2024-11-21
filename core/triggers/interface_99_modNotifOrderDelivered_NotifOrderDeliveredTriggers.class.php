@@ -158,17 +158,17 @@ class InterfaceNotifOrderDeliveredTriggers extends DolibarrTriggers
 
 			// Customer orders
 			//case 'ORDER_CREATE':
-			case 'ORDER_CLOSE':
-				dol_include_once('notiforderdelivered/class/notifyorderclose.class.php');
-				$notify = new NotifyOrderClose($this->db);
-
-				$result = $notify->send($action, $object);
-				if ($result>0) {
-					setEventMessage($langs->trans('OrderCloseEmailNotifySend'));
-				} else {
-					setEventMessage($notify->errors,$notify->error,'errors');
-				}
-				break;
+//			case 'ORDER_CLOSE':
+//				dol_include_once('notiforderdelivered/class/notifyorderclose.class.php');
+//				$notify = new NotifyOrderClose($this->db);
+//
+//				$result = $notify->send($action, $object);
+//				if ($result>0) {
+//					setEventMessage($langs->trans('OrderCloseEmailNotifySend'));
+//				} else {
+//					setEventMessage($notify->errors,$notify->error,'errors');
+//				}
+//				break;
 			//case 'ORDER_MODIFY':
 			//case 'ORDER_VALIDATE':
 			//case 'ORDER_DELETE':

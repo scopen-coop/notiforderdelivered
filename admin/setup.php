@@ -441,7 +441,7 @@ if ($action == 'edit') {
 							setEventMessages(null, $product->errors, "errors");
 						}
 					} else {
-						print $conf->global->{$constname};
+						print getDolGlobalString($constname);
 					}
 					print '</td></tr>';
 				}

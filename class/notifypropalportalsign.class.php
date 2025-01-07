@@ -122,7 +122,7 @@ class NotifyPropalPortalSign extends Notify
 						$link = '<a href="'.$urlwithroot.'/comm/propal/card.php?id='.$object->id.'&entity='.$object->entity.'">'.$newref.'</a>';
 						$dir_output = $conf->propal->multidir_output[$object->entity]."/".get_exdir(0, 0, 0, 1, $object, 'propal');
 						$object_type = 'propal';
-						$labeltouse = $conf->global->PROPAL_CLOSE_SIGNED_TEMPLATE;
+						$labeltouse = getDolGlobalString('PROPAL_CLOSE_SIGNED_TEMPLATE');
 						$mesg = $langs->transnoentitiesnoconv("EMailTextProposalClosedSignedWeb", $link);
 						break;
 				}
@@ -138,7 +138,7 @@ class NotifyPropalPortalSign extends Notify
 					$mimefilename_list[] = $ref.".pdf";
 				}
 
-				$message .= $langs->transnoentities("YouReceiveMailBecauseOfNotification2", $application, $mysoc->name)."\n";
+				$message = $langs->transnoentities("YouReceiveMailBecauseOfNotification2", $application, $mysoc->name)."\n";
 				$message .= "\n";
 				$message .= $mesg;
 

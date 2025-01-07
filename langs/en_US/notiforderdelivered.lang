@@ -18,14 +18,14 @@
 #
 
 # Module label 'ModuleNotifOrderDeliveredName'
-ModuleNotifOrderDeliveredName = Add Notification for Order Delivered and Propal on portal
+ModuleNotifOrderDeliveredName = Add Notification proposal signed on public page
 # Module description 'ModuleNotifOrderDeliveredDesc'
-ModuleNotifOrderDeliveredDesc = Add Notification for Order Delivered and Propal Web Signed in same way as Noticiation module (without amount filter), useless in 18.0 (core Notification module check github PR #22940)
+ModuleNotifOrderDeliveredDesc = Add Notification Propal Web Signed in same way as Noticiation module (without amount filter)
 
 #
 # Admin page
 #
-NotifOrderDeliveredSetup = NotifOrderDelivered setup
+NotifOrderDeliveredSetup = Notification proposal signed on public page setup
 Settings = Settings
 NOTIFICATION_FIXEDEMAIL_ORDER_CLOSE_THRESHOLD_HIGHER_0  = Email destinataire
 
@@ -33,10 +33,8 @@ NOTIFICATION_FIXEDEMAIL_ORDER_CLOSE_THRESHOLD_HIGHER_0  = Email destinataire
 # About page
 #
 About = About
-NotifOrderDeliveredAbout = About NotifOrderDelivered
-NotifOrderDeliveredAboutPage = NotifOrderDelivered about page
+NotifOrderDeliveredAbout = About Notification proposal signed on public page
+NotifOrderDeliveredAboutPage = Notification proposal signed on public page about page
 
 
 EMailTextOrderClose=Order %s has been delivered.
-
-

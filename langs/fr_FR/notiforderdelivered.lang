@@ -18,14 +18,14 @@
 #
 
 # Module label 'ModuleNotifOrderDeliveredName'
-ModuleNotifOrderDeliveredName = Add Notification for Order Delivered
+ModuleNotifOrderDeliveredName = Notification sur devis signée par page publique
 # Module description 'ModuleNotifOrderDeliveredDesc'
-ModuleNotifOrderDeliveredDesc = Add Notification for Order Delivered in same way as Noticiation module (without amount filter), useless in 18.0 (core Notification module check github PR #22940)
+ModuleNotifOrderDeliveredDesc = Notification sur devis signée par page publique
 
 #
 # Admin page
 #
-NotifOrderDeliveredSetup = NotifOrderDelivered setup
+NotifOrderDeliveredSetup = Paramétrage Notification sur devis signée par page publique
 Settings = Settings
 NOTIFICATION_FIXEDEMAIL_ORDER_CLOSE_THRESHOLD_HIGHER_0  = Email destinataire Cloture commande
 NOTIFICATION_FIXEDEMAIL_PROPAL_CLOSE_SIGNED_WEB_THRESHOLD_HIGHER_0 = Email destinataire Devis signé sur le portail
@@ -35,8 +35,8 @@ NOTIFICATION_NOTIFORDER_FORCE_IP=URL Forcé
 # About page
 #
 About = About
-NotifOrderDeliveredAbout = About NotifOrderDelivered
-NotifOrderDeliveredAboutPage = NotifOrderDelivered about page
+NotifOrderDeliveredAbout = A propos Notification sur devis signée par page publique
+NotifOrderDeliveredAboutPage = Page A propos Notification sur devis signée par page publique
 
 
 EMailTextOrderClose=La commande %s a été receptionnée. Vous pouvez planifier le chantier
